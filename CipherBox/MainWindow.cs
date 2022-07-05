@@ -12,9 +12,11 @@ namespace CipherBox
 
         private void submitCipher_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(string.IsNullOrEmpty(cipherDropdown.Text)
-                ? "Please, choose encryption method!"
-                : cipherDropdown.Text);
+            if(string.IsNullOrEmpty(cipherDropdown.Text)) MessageBox.Show(@"Please, choose encryption method!");
+            else
+            {
+                CipherController.buttonHandler(cipherDropdown.Text);
+            }
         }
     }
 }

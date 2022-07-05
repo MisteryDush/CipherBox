@@ -46,6 +46,7 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="CipherController.cs" />
         <Compile Include="MainWindow.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -78,6 +79,12 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="App.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\EncryptionMethods\EncryptionMethods.csproj">
+        <Project>{6a05a22f-d3cf-4b49-b6e2-1a2ff47171bf}</Project>
+        <Name>EncryptionMethods</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
