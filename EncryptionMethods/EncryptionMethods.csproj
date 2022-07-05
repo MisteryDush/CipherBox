@@ -62,6 +62,9 @@
         </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <EmbeddedResource Include="Methods\A1Z26\A1Z26.resx">
+          <DependentUpon>A1Z26.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Methods\ROT13\ROTWindow.resx">
           <DependentUpon>ROTWindow.cs</DependentUpon>
         </EmbeddedResource>
