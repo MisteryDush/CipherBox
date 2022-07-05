@@ -52,6 +52,7 @@
         <Compile Include="Methods\A1Z26\A1Z26.Designer.cs">
           <DependentUpon>A1Z26.cs</DependentUpon>
         </Compile>
+        <Compile Include="Methods\A1Z26\A1Z26Logic.cs" />
         <Compile Include="Methods\ROT13\ROTLogic.cs" />
         <Compile Include="Methods\ROT13\ROTWindow.cs">
           <SubType>Form</SubType>
