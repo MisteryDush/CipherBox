@@ -35,8 +35,11 @@ namespace EncryptionMethods.Methods.ROT13
             this.inputBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.outputBox = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.encrypt = new System.Windows.Forms.RadioButton();
+            this.decrypt = new System.Windows.Forms.RadioButton();
+            this.steps = new System.Windows.Forms.NumericUpDown();
+            this.submitButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize) (this.steps)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,47 +78,76 @@ namespace EncryptionMethods.Methods.ROT13
             this.outputBox.Size = new System.Drawing.Size(191, 87);
             this.outputBox.TabIndex = 3;
             // 
-            // radioButton1
+            // encrypt
             // 
-            this.radioButton1.Location = new System.Drawing.Point(322, 114);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(104, 24);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Encrypt";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.encrypt.Checked = true;
+            this.encrypt.Location = new System.Drawing.Point(268, 114);
+            this.encrypt.Name = "encrypt";
+            this.encrypt.Size = new System.Drawing.Size(104, 24);
+            this.encrypt.TabIndex = 4;
+            this.encrypt.TabStop = true;
+            this.encrypt.Text = "Encrypt";
+            this.encrypt.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // decrypt
             // 
-            this.radioButton2.Location = new System.Drawing.Point(322, 176);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(104, 24);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Decrypt";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.decrypt.Location = new System.Drawing.Point(392, 114);
+            this.decrypt.Name = "decrypt";
+            this.decrypt.Size = new System.Drawing.Size(104, 24);
+            this.decrypt.TabIndex = 5;
+            this.decrypt.TabStop = true;
+            this.decrypt.Text = "Decrypt";
+            this.decrypt.UseVisualStyleBackColor = true;
+            // 
+            // steps
+            // 
+            this.steps.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.steps.Location = new System.Drawing.Point(341, 165);
+            this.steps.Maximum = new decimal(new int[] {26, 0, 0, 0});
+            this.steps.Minimum = new decimal(new int[] {1, 0, 0, 0});
+            this.steps.Name = "steps";
+            this.steps.Size = new System.Drawing.Size(58, 35);
+            this.steps.TabIndex = 6;
+            this.steps.Value = new decimal(new int[] {1, 0, 0, 0});
+            // 
+            // submitButton
+            // 
+            this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.submitButton.Location = new System.Drawing.Point(279, 323);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Size = new System.Drawing.Size(178, 78);
+            this.submitButton.TabIndex = 7;
+            this.submitButton.Text = "Proceed";
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // ROTWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.submitButton);
+            this.Controls.Add(this.steps);
+            this.Controls.Add(this.decrypt);
+            this.Controls.Add(this.encrypt);
             this.Controls.Add(this.outputBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.inputBox);
             this.Controls.Add(this.label1);
             this.Name = "ROTWindow";
             this.Text = "ROT";
+            ((System.ComponentModel.ISupportInitialize) (this.steps)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.NumericUpDown steps;
+        private System.Windows.Forms.Button submitButton;
+
         private System.Windows.Forms.TextBox inputBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton encrypt;
+        private System.Windows.Forms.RadioButton decrypt;
 
         private System.Windows.Forms.TextBox outputBox;
 

@@ -9,5 +9,11 @@ namespace EncryptionMethods.Methods.ROT13
         {
             InitializeComponent();
         }
+
+        private void submitButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(inputBox.Text)) MessageBox.Show("Please, enter the phrase");
+            else outputBox.Text = ROTLogic.Rot(inputBox.Text, encrypt.Checked, (int)steps.Value);
+        }
     }
 }
