@@ -60,6 +60,13 @@
         <Compile Include="Methods\ROT13\ROTWindow.Designer.cs">
           <DependentUpon>ROTWindow.cs</DependentUpon>
         </Compile>
+        <Compile Include="Methods\Vigenere Cipher\VigenereLogic.cs" />
+        <Compile Include="Methods\Vigenere Cipher\VigenereWindow.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Methods\Vigenere Cipher\VigenereWindow.Designer.cs">
+          <DependentUpon>VigenereWindow.cs</DependentUpon>
+        </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <EmbeddedResource Include="Methods\A1Z26\A1Z26.resx">
