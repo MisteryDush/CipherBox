@@ -12,7 +12,7 @@ namespace EncryptionMethods.Methods.Vigenere_Cipher
 
         private void submit_Click(object sender, EventArgs e)
         {
-            outputBox.Text = VigenereLogic.Encrypt(inputBox.Text, encrypt.Checked, keyBox.Text);
+            outputBox.Text = VigenereLogic.Controller(inputBox.Text, encrypt.Checked, keyBox.Text);
         }
     }
 }
