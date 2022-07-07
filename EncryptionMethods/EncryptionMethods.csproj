@@ -75,6 +75,9 @@
         <EmbeddedResource Include="Methods\ROT13\ROTWindow.resx">
           <DependentUpon>ROTWindow.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="Methods\Vigenere Cipher\VigenereWindow.resx">
+          <DependentUpon>VigenereWindow.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>
