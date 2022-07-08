@@ -46,7 +46,7 @@ namespace CipherBox
             this.cipherDropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.cipherDropdown.FormattingEnabled = true;
             this.cipherDropdown.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cipherDropdown.Items.AddRange(new object[] {"ROT13", "A1Z26", "Vigenere Cipher", "Soon..."});
+            this.cipherDropdown.Items.AddRange(new object[] {"ROT13", "A1Z26", "Vigenere Cipher", "Date Time Cipher", "Soon..."});
             this.cipherDropdown.Location = new System.Drawing.Point(380, 201);
             this.cipherDropdown.Name = "cipherDropdown";
             this.cipherDropdown.Size = new System.Drawing.Size(324, 33);

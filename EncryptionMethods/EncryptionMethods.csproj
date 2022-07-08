@@ -53,6 +53,13 @@
           <DependentUpon>A1Z26.cs</DependentUpon>
         </Compile>
         <Compile Include="Methods\A1Z26\A1Z26Logic.cs" />
+        <Compile Include="Methods\DateTimeCipher\DateTimeCipherLogic.cs" />
+        <Compile Include="Methods\DateTimeCipher\DateTimeCipherWindow.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Methods\DateTimeCipher\DateTimeCipherWindow.Designer.cs">
+          <DependentUpon>DateTimeCipherWindow.cs</DependentUpon>
+        </Compile>
         <Compile Include="Methods\ROT13\ROTLogic.cs" />
         <Compile Include="Methods\ROT13\ROTWindow.cs">
           <SubType>Form</SubType>

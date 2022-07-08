@@ -1,6 +1,7 @@
 ﻿using System.Threading;
 using System.Windows.Forms;
 using EncryptionMethods.Methods.A1Z26;
+using EncryptionMethods.Methods.DateTimeCipher;
 using EncryptionMethods.Methods.ROT13;
 using EncryptionMethods.Methods.Vigenere_Cipher;
 
@@ -23,6 +24,10 @@ namespace CipherBox
                     break;
                 case "Vigenere Cipher":
                     window = new VigenereWindow();
+                    window.Show();
+                    break;
+                case "Date Time Cipher":
+                    window = new DateTimeCipherWindow();
                     window.Show();
                     break;
             }
