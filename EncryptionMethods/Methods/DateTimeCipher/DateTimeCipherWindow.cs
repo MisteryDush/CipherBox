@@ -12,8 +12,9 @@ namespace EncryptionMethods.Methods.DateTimeCipher
 
         private void submit_Click(object sender, EventArgs e)
         {
-            var str = DateTimeCipherLogic.Controller(encrypt.Checked, input.Text, key.Text);
-            output.Text = str;
+            var arr = DateTimeCipherLogic.Controller(encrypt.Checked, input.Text, key.Text);
+            output.Text = arr[0];
+            key.Text = arr[1];
         }
     }
 }
