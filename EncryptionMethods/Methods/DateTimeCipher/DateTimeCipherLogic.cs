@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Windows.Forms;
 using EncryptionMethods.Methods.ROT13;
 using EncryptionMethods.Methods.Vigenere_Cipher;
 
@@ -19,7 +16,13 @@ namespace EncryptionMethods.Methods.DateTimeCipher
 
         private static string[] Decrypt(string input, string key)
         {
-            throw new System.NotImplementedException();
+            var key1 = $"{Numbers[int.Parse(char.GetNumericValue(key[4]).ToString())]}{Numbers[int.Parse(char.GetNumericValue(key[5]).ToString())]}";
+            var iter1 = VigenereLogic.Decrypt(input, key1);
+            var key2 = $"{Numbers[int.Parse(char.GetNumericValue(key[2]).ToString())]}{Numbers[int.Parse(char.GetNumericValue(key[3]).ToString())]}";
+            var iter2 = VigenereLogic.Decrypt(iter1, key2);
+            var key3 = int.Parse($"{key[0]}{key[1]}");
+            var iter3 = ROTLogic.Rot(iter2, false, key3);
+            return new[] {iter3, key};
         }
 
         private static string[] Encrypt(string input)
