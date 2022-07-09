@@ -15,7 +15,7 @@ namespace EncryptionMethods.Methods.Vigenere_Cipher
             return output;
         }
 
-        private static string Decrypt(string input, string key)
+        public static string Decrypt(string input, string key)
         {
             var sb = new StringBuilder();
             var i = 0;
@@ -31,7 +31,7 @@ namespace EncryptionMethods.Methods.Vigenere_Cipher
                         var newLetterIndex = indexLetter - keyLetterIndex;
                         if (newLetterIndex < 0)
                         {
-                            newLetterIndex = 26 - newLetterIndex;
+                            newLetterIndex = 26 + newLetterIndex;
                         }
 
                         var newLetter = AlphabetUpper[newLetterIndex];
